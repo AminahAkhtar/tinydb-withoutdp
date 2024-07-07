@@ -1,0 +1,24 @@
+@startuml
+class TinyDB {
+    __repr__()
+    table()
+    tables()
+    drop_tables()
+    drop_table()
+    storage()
+    close()
+    __enter__()
+    __exit__()
+    __getattr__()
+    __len__()
+    __iter__()
+        _storage : Storage 
+    _opened
+    _tables : Dict[str, Table] 
+    _opened
+    __init__(_storage: Storage , _tables: Dict[str, Table] )
+}
+TableBase <|-- TinyDB
+TinyDB --> Storage
+TinyDB --> Table
+@enduml

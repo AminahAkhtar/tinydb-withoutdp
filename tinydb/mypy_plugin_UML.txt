@@ -1,0 +1,10 @@
+@startuml
+class TinyDBPlugin {
+    get_dynamic_class_hook()
+    hook()
+    plugin()
+        named_placeholders : Dict[str, str] 
+    __init__(named_placeholders: Dict[str, str] )
+}
+Plugin <|-- TinyDBPlugin
+@enduml

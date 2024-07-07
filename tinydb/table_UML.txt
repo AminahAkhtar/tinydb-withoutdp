@@ -1,0 +1,54 @@
+@startuml
+class Document {
+        doc_id
+    __init__()
+}
+class Table {
+    __repr__()
+    name()
+    storage()
+    insert()
+    updater()
+    insert_multiple()
+    updater()
+    all()
+    search()
+    get()
+    contains()
+    update()
+    perform_update()
+    perform_update()
+    updater()
+    updater()
+    updater()
+    update_multiple()
+    perform_update()
+    updater()
+    upsert()
+    remove()
+    updater()
+    updater()
+    truncate()
+    count()
+    clear_cache()
+    __len__()
+    __iter__()
+    _get_next_id()
+    _read_table()
+    _update_table()
+        _storage
+    _name
+    _query_cache : LRUCache[QueryLike, List[Document]] 
+    _next_id
+    _next_id
+    _next_id
+    _next_id
+    _next_id
+    _next_id
+    __init__(_query_cache: LRUCache[QueryLike, List[Document]] )
+}
+dict <|-- Document
+Table --> LRUCache
+Table --> QueryLike
+Table --> Document
+@enduml

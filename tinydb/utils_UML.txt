@@ -1,0 +1,28 @@
+@startuml
+class LRUCache {
+    lru()
+    length()
+    clear()
+    __len__()
+    __contains__()
+    __setitem__()
+    __delitem__()
+    __getitem__()
+    __iter__()
+    get()
+    set()
+        capacity
+    cache : OrderedDict[K, V] 
+    __init__(cache: OrderedDict[K, V] )
+}
+class FrozenDict {
+    __hash__()
+    _immutable()
+    update()
+    pop()
+    freeze()
+        __init__()
+}
+LRUCache --> OrderedDict
+dict <|-- FrozenDict
+@enduml

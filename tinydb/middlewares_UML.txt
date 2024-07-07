@@ -1,0 +1,25 @@
+@startuml
+class Middleware {
+    __call__()
+    __getattr__()
+        _storage_cls
+    storage : Storage 
+    storage
+    storage
+    __init__(storage: Storage )
+}
+class CachingMiddleware {
+    read()
+    write()
+    flush()
+    close()
+        cache
+    _cache_modified_count
+    cache
+    cache
+    _cache_modified_count
+    __init__()
+}
+Middleware --> Storage
+Middleware <|-- CachingMiddleware
+@enduml

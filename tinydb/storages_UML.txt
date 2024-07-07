@@ -1,0 +1,27 @@
+@startuml
+class Storage {
+    read()
+    write()
+    close()
+        __init__()
+}
+class JSONStorage {
+    close()
+    read()
+    write()
+        _mode
+    kwargs
+    _handle
+    __init__()
+}
+class MemoryStorage {
+    read()
+    write()
+        memory
+    memory
+    __init__()
+}
+ABC <|-- Storage
+Storage <|-- JSONStorage
+Storage <|-- MemoryStorage
+@enduml

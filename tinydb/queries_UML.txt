@@ -1,0 +1,59 @@
+@startuml
+class QueryLike {
+    __call__()
+    __hash__()
+        __init__()
+}
+class QueryInstance {
+    is_cacheable()
+    __call__()
+    __hash__()
+    __repr__()
+    __eq__()
+    __and__()
+    __or__()
+    __invert__()
+        _test
+    _hash
+    __init__()
+}
+class Query {
+    notest()
+    __repr__()
+    __hash__()
+    __getattr__()
+    __getitem__()
+    _generate_test()
+    runner()
+    __eq__()
+    __ne__()
+    __lt__()
+    __le__()
+    __gt__()
+    __ge__()
+    exists()
+    matches()
+    test()
+    search()
+    test()
+    test()
+    any()
+    test()
+    test()
+    all()
+    test()
+    test()
+    one_of()
+    fragment()
+    test()
+    noop()
+    map()
+    where()
+        _path : Tuple[Union[str, Callable], ...] 
+    __init__(_path: Tuple[Union[str, Callable], ...] )
+}
+Protocol <|-- QueryLike
+QueryInstance <|-- Query
+Query --> Tuple
+Query --> Callable
+@enduml
